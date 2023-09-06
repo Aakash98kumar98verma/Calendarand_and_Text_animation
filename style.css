@@ -1,0 +1,133 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     background-color: #111;
+     color: #fff;
+}
+
+body {
+     scroll-behavior: smooth;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+     text-align: center;
+}
+
+h2 {
+     text-align: center;
+}
+
+/* problem code 1 */
+.container {
+     margin: 25px auto;
+     padding: 25px;
+     border: 2.5px solid blue;
+     border-radius: 5px;
+     background-color: #fff;
+     width: 700px;
+}
+
+.week {
+     list-style-type: none;
+     display: grid;
+     /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+     grid-template-columns: repeat(7, 1fr);
+     background-color: #d8d8d8;
+}
+
+.week>li {
+     margin: 5px;
+     padding: 10px;
+     text-align: center;
+     background-color: #d8d8d8;
+     color: #111;
+}
+
+.day {
+     list-style: none;
+     display: grid;
+     grid-template-columns: repeat(7, 1fr);
+     background-color: #fff;
+}
+
+.day>li {
+     margin: 5px;
+     padding: 10px;
+     text-align: center;
+     background-color: #fff;
+     color: #111;
+}
+
+/* problem code 1 ends*/
+/* problem code 2 starts */
+.container2 {
+     text-transform: uppercase;
+     text-align: center;
+     font-size: xx-large;
+     font-weight: bolder;
+     color: gray;
+     background-color: #fff;
+     border: 2px solid black;
+     padding: 10px;
+     margin: 10px 20px;
+}
+#change>div>div{
+     background-color: #fff;
+}
+
+#change>div>div:after {
+     content: '';
+     animation: mini 5s infinite linear;
+}
+
+@keyframes mini {
+     0% {
+          content: 'work';
+          background-color: rgb(0, 191, 255);
+          color: #fff;
+     }
+
+     25% {
+          content: 'lifestyle';
+          background-color: rgb(0, 255, 0);
+          color: #fff;
+     }
+
+     50% {
+          content: 'everything';
+          background-color: red;
+          color: #fff;
+     }
+
+     75% {
+          content: 'lifestyle';
+          background-color: rgb(0, 255, 0);
+          color: #fff;
+     }
+
+     100% {
+          content: 'work';
+          background-color: rgb(0, 191, 255);
+          color: #fff;
+     }
+}
+
+/* media query */
+
+@media screen and (max-width: 750px) {
+     .container2 {
+          font-size: x-large;
+          font-weight: bold;
+     }
+}
+
+@media screen and (max-width: 250px) {
+     .container2 {
+          font-size: large;
+          font-weight: 300;
+          text-align: left;
+          margin: 5px;
+     }
+}
